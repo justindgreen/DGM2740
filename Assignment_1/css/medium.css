@@ -1,0 +1,14 @@
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 48rem) {
+	/* Styles */
+
+	main img.phone {
+		display: none;
+	}
+	main img.desktop {
+		display: none;
+	}
+	main img.tablet {
+		display: block;
+	}
+}

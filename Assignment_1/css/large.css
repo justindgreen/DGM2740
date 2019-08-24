@@ -1,0 +1,13 @@
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 76.5rem) {
+	/* Styles */
+	main img.phone {
+		display: none;
+	}
+	main img.desktop {
+		display: block;
+	}
+	main img.tablet {
+		display: none;
+	}
+}
