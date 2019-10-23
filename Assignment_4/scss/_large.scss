@@ -1,0 +1,28 @@
+header, nav, main, footer {
+        max-width: 60rem;
+        margin:auto;
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+#headerWrapper{
+    background-image: url("../images/headerLarge.jpg"), url("../images/headerRepeatLeft.png");
+    background-repeat: no-repeat, repeat-x;
+    background-position: center, left;
+    height: 266px;}
+ header h2 {display: block; margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+
+
+
+/*----------- MAIN --------------*/
+
+
+
+/*----------- FOOTER --------------*/
+    

@@ -1,0 +1,185 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: $fontFamilyVariable
+}
+
+header,
+nav,
+main,
+footer{
+    max-width: 60rem;
+}
+
+/*----------- HEADER --------------*/
+
+#headerWrapper {
+    background-color: $primaryColor;
+    background-image: url("../images/headerSmall.jpg");
+}
+
+header {
+    padding: .5rem 2%;
+    display: flex;
+    justify-content: left;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    height: 104px;
+
+    #companyInfo {max-width: 960px;}
+}
+
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+#navWrapper {
+    width: 100%;
+    background-color: lighten($primaryColor, 20%);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+nav ul li {
+    float: left;
+    width: 25%;
+}
+nav ul li a {
+    display: block;
+    color: #333;
+    border-left: 1px solid #777;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li:first-child a {border-left: none;}
+
+nav ul li a:hover {
+    background-color: lighten($primaryColor, 30%);
+    color: #333;
+}
+nav ul li.active a {
+    background-color: lighten($primaryColor, 10%);
+    color: #fff;
+}
+
+
+
+/*----------- MAIN --------------*/
+
+
+main {
+    padding: 0 2%;
+    min-height: 10rem;
+
+    #contentWrapper {
+        padding-bottom: 2rem;
+
+        body {
+            margin-top: 80px;
+            background: gainsboro;
+          }
+          .container {
+            background-color: transparent;
+          }
+          
+          .path {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 40px;
+          }
+          .shape {
+            position: absolute;
+            left: 0;
+            background: url("../images/bear.png");
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+            top: 10px;
+            
+            animation: keys 10.7s infinite;
+          }
+          .shape2 {
+            position: absolute;
+            left: 0;
+            background: url("../images/bear.png");
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+            top: 10px;
+            
+            animation: keys 10.7s 2s infinite;
+          }
+
+          .shape3 {
+            position: absolute;
+            left: 0;
+            background: url("../images/bear.png");
+            background-repeat: no-repeat;
+            width: 50px;
+            height: 50px;
+            display: block;
+            top: 10px;
+            
+            animation: keys 10.7s 4s infinite;
+          }
+          
+          
+          @keyframes keys {
+            0% {
+              left: 0;
+              transform: scaleX(1);
+            }
+            40% {
+                transform: scaleX(1);
+            }
+            50% {
+              left: 90%;
+              transform: scaleX(-1);
+            }
+            90% {
+                transform: scaleX(-1);
+            }
+            100% {
+              left: 0;
+              transform: scaleX(1);
+            }
+          }
+          
+    }
+}
+
+/*----------- FOOTER --------------*/
+#footerWrapper {
+    width: 100%;
+    background-color: $primaryColor;
+}
+
+footer {
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
