@@ -1,0 +1,85 @@
+header,
+nav,
+main,
+footer {
+        max-width: 75rem;
+        margin: auto;
+}
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+#headerWrapper {
+        header h2 {
+                display: block;
+                margin: 0;
+                font-weight: normal;
+        }
+
+        #searchBar {
+                bottom: 1rem;
+                right: 0;
+        }
+}
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+main {
+        #profileWrapper {
+
+                #profile1 {
+                        grid-column: 3 / span 2
+                }
+
+                .profiles {
+                        grid-column: span 2;
+                }
+        }
+
+        #buttonWrapper {
+
+                #clients {
+                        grid-column:  2 / span 3;
+                }
+
+                #review {
+                        grid-column: span 4;
+                }
+
+                #cases {
+                        grid-column: span 3;
+                }
+        }
+
+        #blogWrapper {
+                
+                div {grid-column: span 3;}
+        }
+
+        #faqWrapper {
+               
+                #tipOfTheDay {
+                        grid-column: span 6;
+                }
+
+                #faq1 {
+                        grid-column: span 2;
+                }
+
+                #faq2 {
+                        grid-column: span 2;
+                }
+
+                #faq3 {
+                        grid-column: span 2;
+                }
+        }
+
+}
+
+/*----------- FOOTER --------------*/
