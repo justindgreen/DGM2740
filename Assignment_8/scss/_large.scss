@@ -1,0 +1,39 @@
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+
+main {
+        grid-template-columns: repeat(4, 1fr);
+    
+        figure {
+    
+            &#focusArticle {
+                grid-column: span 3;  
+                grid-row: span 2;
+    
+            }
+        }
+    }
+
+/*----------- FOOTER --------------*/
+
+#footerWrapper {
+    
+        footer {
+            grid-template-columns: repeat(4, 1fr);
+    
+            div#copywrite {
+                grid-column: span 4;
+                text-align: center;
+                padding-bottom: 1.5rem;
+            }
+        }
+    }

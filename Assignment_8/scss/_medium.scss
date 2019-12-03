@@ -1,0 +1,103 @@
+
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+/*----------- NAVIGATION --------------*/
+
+#navWrapper {
+    nav {
+
+        ul {
+
+            li{
+                width: auto; 
+                float: left;
+
+                &:first-child a {
+                    border-left: none;
+                }
+                
+                &:last-child a {
+                    border-right: 1px solid #777;
+                }
+
+                &.active a {
+                    background-color: darken($secondaryColor, 10%);
+                    color: #fff;
+                }
+
+                a {
+                    padding: .5rem 1rem;
+                    border-left: 1px solid #777;
+
+                    &:first-child:hover {
+                        background-color: $secondaryColor;
+                        color: #fff;
+                    }
+
+                    &:hover {
+                        background-color: lighten($secondaryColor, 10%);
+                        color: #fff;
+                    }
+                }
+                
+                &.menuItem {
+                    display: block;
+                }
+
+                &#mobileMenu {
+                    display: none;
+                }
+            
+            }
+        }
+    }
+}
+
+    
+/*----------- MAIN --------------*/
+
+main {
+    grid-template-columns: repeat(3, 1fr);
+
+    figure {
+
+        &#focusArticle {
+            grid-column: span 3;  
+
+        }
+    }
+}
+
+/*----------- FOOTER --------------*/
+    
+#footerWrapper {
+    width: 100%;
+    border-top: 1px black solid;
+    background: $primaryColor;
+
+    footer {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        div.footerContent {
+            margin-left: 25%;
+
+            div {
+                display: inline-block;
+                text-align: left;
+            }
+        }
+
+        div#copywrite {
+            grid-column: span 2;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+    }
+}
