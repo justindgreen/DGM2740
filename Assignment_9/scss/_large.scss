@@ -1,0 +1,57 @@
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+#headerWrapper {
+    #fullImage {
+        display: block;
+    }
+    #mediumImage {
+        display: none;
+    }
+    #smallImage {
+        display: none;
+    }
+}
+
+/*----------- NAVIGATION --------------*/
+
+
+/*----------- MAIN --------------*/
+
+#mainWrapper {
+    #contentWrapper {
+        grid-template-columns: repeat(4, 1fr);
+
+        #card1 {
+
+            &:hover {
+                background-image: url("../images/hotelLarge.jpg");
+            }
+        }
+
+        #card2 {
+
+            &:hover {
+                background-image: url("../images/redLineLarge.jpg");
+            }
+        }
+
+        #card3 {
+
+            &:hover {
+                background-image: url("../images/cityPassLarge.jpg");
+            }
+        }
+
+        #card4 {
+
+            &:hover {
+                background-image: url("../images/diningLarge.jpg");
+            }
+        }
+    }
+    }
+
+/*----------- FOOTER --------------*/
