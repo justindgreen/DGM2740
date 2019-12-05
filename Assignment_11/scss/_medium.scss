@@ -1,0 +1,40 @@
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/
+
+header {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+}
+/*----------- NAVIGATION --------------*/
+
+
+    
+/*----------- MAIN --------------*/
+#mainWrapper {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*----------- FOOTER --------------*/
+    
+#footerWrapper {
+    width: 100%;
+    border-top: 1px black solid;
+    background: $primaryColor;
+
+    footer {
+        padding-top: 1rem;
+            text-align: center;
+        }
+    }
