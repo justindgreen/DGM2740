@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Fill Me In" />
+  <meta name="author" content="John Doe" />
+
+  <!-- This start file was build by Paul Cheney  -->
+  <title>10 Swag Shop</title>
+
+  <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- STYLE SHEETS -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-1.8.3.min.js"
+    integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="headerWrapper">
+    <!-- HEADER HERE -->
+    <header>
+      <div id="companyInfo">
+        <img src="images/logo.PNG" alt="logo" />
+        <h1>Swag Shop</h1>
+      </div>
+    </header>
+  </div>
+  <!--end of headerWrapper-->
+
+  <!-- NAVIGATION HERE -->
+  <div id="navWrapper">
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+      <button id="hamburgerBtn"><span><i>&equiv;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span></button>
+      <ul id="primaryNav">
+        <li><a href="#">Home</a></li>
+        <li class="current-menu-item"><a href="#">Products</a></li>
+        <li><a href="#">Sales</a></li>
+        <li class="parent"><a href="#">Location</a>
+          <ul>
+            <li><a href="#">Here</a></li>
+            <li><a href="#">There</a></li>
+            <li><a href="#">Everywhere</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--end ofnavWrapper-->
+
+  <!-- CONTENT HERE -->
+  <div id="mainWrapper">
+    <main>
+      <h2>Order</h2>
+      <form id="slider" action="/Assignment_10/thankYou.html">
+        <article id="apage_1">
+          <h4>Customer Information</h4>
+          <div class="form-item">
+            <input id="fullName" type="text" required />
+            <label for="fullName" class="category">Full Name:</label>
+          </div>
+          <div class="form-item">
+            <input id="phone" type="text" required />
+            <label for="phone" class="category">Phone:</label>
+          </div>
+          <div class="form-item">
+            <input id="email" type="text" />
+            <label for="email" class="category">Email:</label>
+          </div>
+        </article>
+        <article id="apage_2">
+          <h4>Swag Information</h4>
+          <div class="form-item">
+            <input id="date" type="date" />
+            <label for="date" class="category">Date Needed:</label>
+          </div>
+          <div class="form-item">
+            <input id="businessName" type="text" />
+            <label for="businessName" class="category">Business Name:</label>
+          </div>
+          <div class="form-item">
+            <input id="website" type="url" />
+            <label for="website" class="category">Website Name:</label>
+          </div>
+          <div class="form-item">
+              <label for="color" class="category">Color:</label>
+            <select id="color">
+              <option value="" selected hidden disabled>Please Select</option>
+              <option value="Black">Black</option>
+              <option value="Blue">Blue</option>
+              <option value="Red">Red</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <input id="quantity" type="number" />
+            <label for="quantity" class="category">Quantity:</label>
+          </div>
+          <div class="form-item">
+            <label class="category">Material:</label>
+            <div id="radioContainer">
+            <div class="radioDiv">
+            <input type="radio" name="material" id="material1" />
+            <label for="material1">Aluminum</label>
+          </div>
+          <div class="radioDiv">
+            <input type="radio" name="material" id="material2" />
+            <label for="material2">Plastic</label>
+          </div>
+        </div>
+          </div>
+        </article>
+        <article id="apage_3">
+          <h4>Payment Information</h4>
+          <div class="form-item">
+            <input id="cardName" type="text" required />
+            <label for="cardName" class="category">Name on Card:</label>
+          </div>
+          <div class="form-item">
+            <input id="cardNumber" type="number" required />
+            <label for="cardNumber" class="category">Card Number:</label>
+          </div>
+          <div class="form-item">
+            <input id="cardDate" type="date" required />
+            <label for="cardDate" class="category">Expiration Date:</label>
+          </div>
+        </article>
+      </form>
+    </main>
+  </div>
+  <!--end of mainWrapper-->
+  <!-- FOOTER HERE -->
+  <div id="footerWrapper">
+    <footer>
+      <div id="copywrite">© 2017 • Company Name • Phone 1-800-555-1234 • Login</div>
+    </footer>
+  </div>
+  <!--end of footerWrapper-->
+
+  <script type="text/javascript">
+    //Create a button and give it an ID of "hamburgerBtn"
+    //Attach an ID of "primaryNav" to the UL of the unordered list that holds your links
+    function toggleMenu() {
+      document.getElementById("hamburgerBtn").classList.toggle("open");
+      document.getElementById("primaryNav").classList.toggle("open");
+    }
+    var x = document.getElementById('hamburgerBtn');
+    x.onclick = toggleMenu;
+
+    // add back button to all screens but first
+    $("article:not(:first)").append('<button class="back" type="button">Back</button>');
+    // add next button to all screens but last
+    $("article:not(:last)").append('<button class="next" type="button">Next</button>');
+    // add submit button to last screen
+    $("article:last").append('<button class="form-submit" type="submit" value="Submit">Order My Swag</button>');
+    //hide every form section except first
+    $("article:nth-child(1n+2)").hide();
+    //add class of visible to first screen
+    $("article:first").addClass("visible");
+
+    //start the index at 1    
+    var pageNum = 1;
+    var currentPage = 1;
+
+    //each time the user clicks the next button, remove the visible class, hide that section, fade in the next with a new class of visible
+    $("button.next").on("click", function (e) {
+      e.preventDefault();
+      $(this).closest("article").removeClass("visible").hide().next().addClass("visible").fadeIn();
+      currentPage++;
+      showCurrentTab();
+    });
+
+    //each time the user clicks the back button, remove the visible class, hide that section, fade in the next with a new class of visible
+    $("button.back").on("click", function (e) {
+      e.preventDefault();
+      $(this).closest("article").removeClass("visible").hide().prev().addClass("visible").fadeIn();
+      currentPage--;
+      showCurrentTab();
+    });
+
+    function showCurrentTab() {
+      $('.pagetab').hide();
+      $('#pagetab_' + currentPage).show();
+      check_required_inputs()
+      switch (currentPage) {
+        case 1:
+          $('#slider').css('height', '15rem')
+          break
+        case 2:
+          $('#slider').css('height', '22rem')
+          break
+        case 3:
+          $('#slider').css('height', '15rem')
+          break
+      }
+    }
+
+    showCurrentTab(); //Show the first 
+
+
+
+    function check_required_inputs() {
+
+      let required = $('input,textarea,select').filter('[required]:visible');
+
+      required.each(function () {
+        if ($(this).hasClass("invalid")) {
+          $('button.next').prop('disabled', true);
+          $('button.form-submit').prop('disabled', true);
+        }
+
+        if ($(this).val() === "") {
+          $(this).addClass('invalid')
+        } else {
+          $(this).removeClass('invalid')
+        }
+      });
+      if (!$('input,textarea,select').filter('.invalid').length) {
+        $('button.next').prop('disabled', false);
+        $('button.form-submit').prop('disabled', false);
+      }
+    }
+
+    function thankYou() {
+      $("article").removeClass("visible")
+      $('#thanksPage').addClass("visible")
+    }
+
+    $("#slider").on("change keyup focusout", check_required_inputs);
+    check_required_inputs();
+  </script>
+</body>
+
+</html>

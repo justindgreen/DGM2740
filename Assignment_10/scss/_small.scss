@@ -1,0 +1,387 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: $fontFamilyVariable;
+    max-width: 64rem;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+header,
+nav,
+main,
+footer {
+    max-width: 64rem;
+}
+
+/*----------- HEADER --------------*/
+
+#headerWrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: $primaryColor;
+    max-width: 64rem;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+
+    img {
+        height: 50px;
+        float: left;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        float: left;
+        padding-top: .5rem;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1rem;
+        z-index: 2;
+    }
+
+}
+
+/*----------- NAVIGATION --------------*/
+
+#hamburgerBtn {
+    display: none;
+}
+
+/* hide the navigation button for all screen widths. We will show it below just for small screens */
+
+//these two variables control the background color and text color
+$menuColor: lighten($primaryColor, 5%);
+$menuTextColor: rgba(255, 255, 255, 0.9);
+
+// limit the code below to the max width show in the media query below. This width should match the breakpoint where your suckerfish horizontal menu is to take over.
+@media only screen and (max-width: 37rem) {
+
+    /* Pushes the body tag down to make room for the navigation bar at the top of the page */
+    body {
+        padding-top: 2.75rem;
+    }
+
+    // places the navigation bar at the top of the page
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.75rem;
+        background-color: $menuColor;
+    }
+
+    //Styles the clickable hamburger button
+    #hamburgerBtn {
+        display: block;
+        width: 7rem;
+        height: 2.75rem;
+        background: none;
+        color: $menuTextColor;
+        border: 0 none;
+        font-size: 1.3rem;
+        font-weight: normal;
+        text-align: left;
+
+        //used to enlarge an entity to match any words that may also be used, like OPEN
+        i {
+            font-size: 2rem;
+            font-style: normal;
+        }
+
+    }
+
+    // These lines show and hide the two alternate icons for the open and close hamburger
+    #hamburgerBtn.open span:nth-child(1) {
+        display: none;
+    }
+
+    #hamburgerBtn.open span:nth-child(2) {
+        display: block;
+    }
+
+    #hamburgerBtn span:nth-child(1) {
+        display: block;
+    }
+
+    #hamburgerBtn span:nth-child(2) {
+        display: none;
+    }
+
+    // unordered list Navigation Bar --------------------------------------------------------
+    #primaryNav {
+        height: 0; //hides the nav links 
+        overflow: hidden;
+        width: 20rem;
+        background-color: $menuColor;
+        margin: 0;
+        padding: 0;
+        z-index: 998; // places the links above the page content
+        font-family: Verdana;
+        font-weight: normal;
+    }
+
+    // if the site has a class of active added to any list itme then it is darkened for "Wayfinding"
+    #primaryNav li.current-menu-item a {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    // style the anchors
+    #primaryNav li a {
+        display: block; // shows the nav links
+        width: 100%;
+        padding: .75rem 2vw;
+        font-size: 14px;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, .15);
+        color: $menuTextColor;
+        text-decoration: none;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    // when hovering over any menu item or sub menu item darken by 5%
+    #primaryNav li a:hover {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    // Toggle the navigation bar to expand down when the javascript assigns the "open" class
+    #primaryNav.open {
+        height: auto;
+    }
+
+    // .parent class indicates dropdown by adding a down arrow to the parent list item 
+    #primaryNav li.parent>a::after {
+        font-size: .75rem;
+        content: "\25BC";
+        color: rgba(255, 255, 255, .5);
+        float: right;
+    }
+
+    //hide the sub menu unordered list by default
+    #primaryNav li ul {
+        display: none;
+        background: rgba(0, 0, 0, .3);
+        padding: 0;
+        margin: 0;
+    }
+
+    // styles the sub menu anchors just a bit
+    #primaryNav li ul a {
+        padding-left: 20px;
+    }
+
+    //display the sub menu unordered list on touch or hover
+    #primaryNav li:hover ul {
+        display: block;
+    }
+
+    // style the sub menu items
+
+
+}
+
+/* End Mobile Styles */
+
+
+/*----------- MAIN --------------*/
+
+#mainWrapper {
+
+    main {
+        margin: auto 2%;
+        h2 {
+            margin-bottom: 0;
+        }
+
+        form {
+            &#slider {
+                width: 100%;
+                height: 24rem;
+                margin: 0 auto;
+                clear: left;
+
+                article {
+                    background: white;
+                    padding: 1rem;
+                    float: left;
+                    width: 100%;
+                    border: 1px solid #000;
+                    border-radius: 5px;
+
+                    h4 {
+                        margin-top: 0;
+                    }
+                }
+
+                label.category {
+                    width: 46%;
+                    float: left;
+                    margin-right: .5rem;
+                    color: #474747;
+                }
+
+                label {
+                    margin-right: 1rem;
+                }
+
+                input:required+label::after {
+                    content: " *";
+                }
+
+                input:required:valid {
+                    border: 1px solid #0a0
+                }
+
+                input:not([type=radio]) {
+                    width: 50%;
+                    border: none;
+                    background: #ececec;
+                    padding: .2rem 1rem;
+                    border-radius: 4px;
+                }
+
+                #radioContainer {
+                    float: left;
+                    width: 50%;
+                }
+
+                .radioDiv {
+                    display: block;
+                }
+
+                select {
+                    float: left;
+                    width: 50%;
+                    padding: .2rem 1rem;
+                    border-radius: 4px;
+                }
+            }
+        }
+
+        .form-item {
+            margin-bottom: 10px;
+            width: 100%;
+            height: 1.8rem;
+        }
+
+        .form-submit {
+            background: #f36b06;
+            display: block;
+            width: 60%;
+            float: left;
+            text-align: center;
+            padding: .2rem 1rem;
+            border-radius: 4px;
+            color: #fff;
+
+            &:disabled {
+                background: #ccc;
+            }
+        }
+
+        .next {
+            background: #f36b06;
+            display: block;
+            width: 33%;
+            float: left;
+            text-align: center;
+            padding: .2rem 1rem;
+            border-radius: 4px;
+            color: #fff;
+
+            &:disabled {
+                background: #ccc;
+            }
+        }
+
+        .back {
+            background: #f36b06;
+            display: block;
+            width: 33%;
+            float: left;
+            text-align: center;
+            clear: left;
+            padding: .2rem 1rem;
+            border-radius: 4px;
+            color: #fff;
+            margin-right: 1rem;
+        }
+
+        #page {
+            float: left;
+            margin: 10px 0 0 0
+        }
+
+        #page li {
+            float: left;
+            margin: 0 5px 0 0;
+            padding: .2rem 1rem;
+            background: #f36b06;
+            text-align: center;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        #page li a {
+            color: white;
+            text-decoration: none
+        }
+    }
+}
+
+/*----------- FOOTER --------------*/
+#footerWrapper {
+    width: 100%;
+    border-top: 1px black solid;
+    background: $primaryColor;
+    max-width: 64rem;
+
+    footer {
+        width: 100%;
+        color: #fff;
+
+        div#copywrite {
+            text-align: center;
+            padding: 1rem 0;
+            font-size: .75rem;
+        }
+    }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}

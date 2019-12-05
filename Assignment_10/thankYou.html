@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Fill Me In" />
+  <meta name="author" content="John Doe" />
+
+  <!-- This start file was build by Paul Cheney  -->
+  <title>10 Swag Shop</title>
+
+  <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- STYLE SHEETS -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-1.8.3.min.js"
+    integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="headerWrapper">
+    <!-- HEADER HERE -->
+    <header>
+      <div id="companyInfo">
+        <img src="" alt="" />
+        <h1>Swag Shop</h1>
+      </div>
+    </header>
+  </div>
+  <!--end of headerWrapper-->
+
+  <!-- NAVIGATION HERE -->
+  <div id="navWrapper">
+    <!-- NAVIGATION HERE -->
+    <nav class="clearfix">
+      <button id="hamburgerBtn"><span><i>&equiv;</i>OPEN</span> <span><i>&otimes;</i>CLOSE</span></button>
+      <ul id="primaryNav">
+        <li><a href="#">Home</a></li>
+        <li class="current-menu-item"><a href="#">Products</a></li>
+        <li><a href="#">Sales</a></li>
+        <li class="parent"><a href="#">Location</a>
+          <ul>
+            <li><a href="#">Here</a></li>
+            <li><a href="#">There</a></li>
+            <li><a href="#">Everywhere</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--end ofnavWrapper-->
+
+  <!-- CONTENT HERE -->
+  <div id="mainWrapper">
+    <main>
+        <article id="thanksPage">
+          <div>
+            <h2 style="text-align: center;padding: 10rem;">Thank you for your order!</h2>
+          </div>
+        </article>
+      </form>
+    </main>
+  </div>
+  <!--end of mainWrapper-->
+  <!-- FOOTER HERE -->
+  <div id="footerWrapper">
+    <footer>
+      <div id="copywrite">© 2017 • Company Name • Phone 1-800-555-1234 • Login</div>
+    </footer>
+  </div>
+  <!--end of footerWrapper-->
+
+  <script type="text/javascript">
+    //Create a button and give it an ID of "hamburgerBtn"
+    //Attach an ID of "primaryNav" to the UL of the unordered list that holds your links
+    function toggleMenu() {
+      document.getElementById("hamburgerBtn").classList.toggle("open");
+      document.getElementById("primaryNav").classList.toggle("open");
+    }
+    var x = document.getElementById('hamburgerBtn');
+    x.onclick = toggleMenu;
+</script>
+</body>
+
+</html>
