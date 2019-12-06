@@ -1,7 +1,7 @@
 /*----------- BODY --------------*/
 header,
 nav,
-main,
+#main,
 footer {
     max-width: 47rem;
     margin: auto;
@@ -101,7 +101,7 @@ nav {
     margin: auto;
     margin-bottom: .5rem;
 
-        main {
+        #main {
             margin:auto;
             padding: 0 2rem;
 
@@ -119,7 +119,7 @@ nav {
     color: #fff;
     margin-bottom: 3rem;
 
-    main {
+    #main {
         padding: .5rem 2rem 1rem;
         display: flex;
         justify-content: space-between;
@@ -263,7 +263,7 @@ nav {
 #partnerWrapper {
     height: 4rem;
 
-    main {
+    #main {
         text-align: justify;
 
         img {
