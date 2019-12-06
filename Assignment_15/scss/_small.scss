@@ -1,0 +1,389 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*----------- BODY --------------*/
+
+
+body {
+    font-size: 16px;
+    font-family: $fontFamilyVariable;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/*----------- HEADER --------------*/
+
+header,
+nav,
+main,
+footer {
+    max-width: 47rem;
+    margin: auto;
+    padding: 0 .2rem;
+}
+
+/*----------- NAVIGATION --------------*/
+
+#hamburgerBtn {
+    display: none;
+}
+
+/* hide the navigation button for all screen widths. We will show it below just for small screens */
+
+//these two variables control the background color and text color
+$menuColor: #fff;
+$menuTextColor: #a8a8b2;
+
+// limit the code below to the max width show in the media query below. This width should match the breakpoint where your suckerfish horizontal menu is to take over.
+@media only screen and (max-width: 37rem) {
+
+    /* Pushes the body tag down to make room for the navigation bar at the top of the page */
+    body {
+        padding-top: 2.75rem;
+    }
+
+    #headerWrapper {
+        header {
+            padding: .2rem;;
+            #companyInfo {
+                width: 100%;
+                
+                img{max-width: 150%}
+            }
+
+        }
+    }
+
+    // places the navigation bar at the top of the page
+    nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2.75rem;
+        background-color: $menuTextColor;
+        padding: 0;
+    }
+
+    //Styles the clickable hamburger button
+    #hamburgerBtn {
+        display: block;
+        width: 7rem;
+        height: 2.75rem;
+        background: none;
+        color: $menuColor;
+        border: 0 none;
+        font-size: 1.3rem;
+        font-weight: normal;
+        text-align: left;
+        padding: 0 1rem;
+
+        //used to enlarge an entity to match any words that may also be used, like OPEN
+        i {
+            font-size: 2rem;
+            font-style: normal;
+        }
+
+    }
+
+    // These lines show and hide the two alternate icons for the open and close hamburger
+    #hamburgerBtn.open span:nth-child(1) {
+        display: none;
+    }
+
+    #hamburgerBtn.open span:nth-child(2) {
+        display: block;
+    }
+
+    #hamburgerBtn span:nth-child(1) {
+        display: block;
+    }
+
+    #hamburgerBtn span:nth-child(2) {
+        display: none;
+    }
+
+    // unordered list Navigation Bar --------------------------------------------------------
+    #primaryNav {
+        height: 0; //hides the nav links 
+        overflow: hidden;
+        width: 20rem;
+        background-color: $menuColor;
+        margin: 0;
+        padding: 0;
+        z-index: 998; // places the links above the page content
+        font-family: Verdana;
+        font-weight: normal;
+
+        ul {
+            list-style-type: none;
+        }
+    }
+
+    // if the site has a class of active added to any list itme then it is darkened for "Wayfinding"
+    #primaryNav li.current-menu-item a {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    // style the anchors
+    #primaryNav li a {
+        display: block; // shows the nav links
+        width: 100%;
+        padding: .75rem 2vw;
+        font-size: 14px;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, .15);
+        color: $menuTextColor;
+        text-decoration: none;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+    }
+
+    // when hovering over any menu item or sub menu item darken by 5%
+    #primaryNav li a:hover {
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    // Toggle the navigation bar to expand down when the javascript assigns the "open" class
+    #primaryNav.open {
+        height: auto;
+    }
+
+    // .parent class indicates dropdown by adding a down arrow to the parent list item 
+    #primaryNav li.parent>a::after {
+        font-size: .75rem;
+        content: "\25BC";
+        color: rgba(255, 255, 255, .5);
+        float: right;
+    }
+
+    //hide the sub menu unordered list by default
+    #primaryNav li ul {
+        display: none;
+        background: rgba(0, 0, 0, .3);
+        padding: 0;
+        margin: 0;
+    }
+
+    // styles the sub menu anchors just a bit
+    #primaryNav li ul a {
+        padding-left: 20px;
+    }
+
+    //display the sub menu unordered list on touch or hover
+    #primaryNav li:hover ul {
+        display: block;
+    }
+
+    // style the sub menu items
+
+
+}
+
+/* End Mobile Styles */
+
+
+/*----------- MAIN --------------*/
+
+.yellowHeader {
+    color: #fcd831;
+}
+
+#bannerWrapper {
+    margin-bottom: .5rem;
+
+    main {
+        padding: auto .2rem;
+    }
+}
+
+#midPageWrapper {
+    width: 100%;
+    background: #101018;
+    color: #fff;
+    margin-bottom: 1rem;
+
+    main {
+        padding: .5rem .2rem 1rem;
+
+        #leftContent {
+            width: 80%;
+            margin: auto;
+
+            h3 {
+                margin: .5rem 0
+            }
+
+            #blackBar1 {
+                font-size: .65rem;
+                font-style: italic;
+            }
+
+            ul {
+                font-size: .7rem;
+                columns: 2;
+                padding-inline-start: 1rem;
+                margin-right: .1rem;
+
+            }
+        }
+
+        #rightContent {
+            text-align: center;
+
+            h3 {
+                margin: .5rem 0
+            }
+
+            h4 {
+                margin: .2rem 0;
+            }
+
+            h2 {
+                margin: .5rem 0
+            }
+        }
+    }
+}
+
+#articleWrapper {
+    h2 {
+        font-weight: normal;
+        color: #0480b1;
+        width: 100%;
+        border-bottom: 1px solid #e3e3e6;
+        margin-bottom: .2rem;
+    }
+
+    .article {
+        font-size: .6rem;
+        word-break: break-all;
+        word-break: break-word;
+        hyphens: auto;
+        color: #c7c7cd;
+    }
+
+    #categories1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        border-bottom: 1px solid #e3e3e6;
+        margin-bottom: 1rem;
+        padding-bottom: 1.5rem;
+
+        h3 {
+            font-weight: normal;
+            color: #0480b1;
+            margin: .3rem 0;
+        }
+    }
+    }
+
+    #bottomWrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 1rem;
+        margin-bottom: 2rem;
+
+        #categories2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            grid-column-gap: 1rem;
+
+            h3 {
+                font-weight: normal;
+                color: #0480b1;
+                margin: .3rem 0;
+            }
+        }
+
+        #graph {
+            position: relative;
+
+            img { width: 100%}
+
+            button {
+                position: absolute;
+                bottom: 1.5rem;
+                width: 75%;
+                left: 2.5rem;
+                border-radius: 8px;
+                border: none;
+                background: url("../images/button.png");
+                background-size: cover;
+                color: #fff;
+                padding: .3rem 0;
+            }
+
+            div {
+                margin-top: -3rem;
+                font-size: .6rem;
+                text-align: center;
+            }
+        }
+
+        #techSupport {
+            grid-column: span 2;
+        }
+    }
+
+#partnerWrapper {
+
+    main {
+        text-align: justify;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 30%;
+            padding: .3rem 0;
+        }
+
+        &:after {
+            content: "";
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}
+
+/*----------- FOOTER --------------*/
+#footerWrapper {
+    width: 100%;
+    background: linear-gradient(#0480b1, #014064);
+
+    footer {
+        width: 100%;
+        color: #fff;
+
+        div#copywrite {
+            padding: 0 2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: .75rem;
+        }
+    }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
