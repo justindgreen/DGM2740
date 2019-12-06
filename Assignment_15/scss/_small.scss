@@ -30,7 +30,7 @@ img {
 
 header,
 nav,
-#main,
+.main,
 footer {
     max-width: 47rem;
     margin: auto;
@@ -205,7 +205,7 @@ $menuTextColor: #a8a8b2;
 #bannerWrapper {
     margin-bottom: .5rem;
 
-    #main {
+    .main {
         padding: auto .2rem;
     }
 }
@@ -216,7 +216,7 @@ $menuTextColor: #a8a8b2;
     color: #fff;
     margin-bottom: 1rem;
 
-    #main {
+    .main {
         padding: .5rem .2rem 1rem;
 
         #leftContent {
@@ -344,7 +344,7 @@ $menuTextColor: #a8a8b2;
 
 #partnerWrapper {
 
-    #main {
+    .main {
         text-align: justify;
 
         img {

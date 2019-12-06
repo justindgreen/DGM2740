@@ -367,7 +367,7 @@ img {
 /*----------- HEADER --------------*/
 header,
 nav,
-#main,
+.main,
 footer {
   max-width: 47rem;
   margin: auto;
@@ -494,7 +494,7 @@ footer {
   margin-bottom: .5rem;
 }
 
-#bannerWrapper #main {
+#bannerWrapper .main {
   padding: auto .2rem;
 }
 
@@ -505,25 +505,25 @@ footer {
   margin-bottom: 1rem;
 }
 
-#midPageWrapper #main {
+#midPageWrapper .main {
   padding: .5rem .2rem 1rem;
 }
 
-#midPageWrapper #main #leftContent {
+#midPageWrapper .main #leftContent {
   width: 80%;
   margin: auto;
 }
 
-#midPageWrapper #main #leftContent h3 {
+#midPageWrapper .main #leftContent h3 {
   margin: .5rem 0;
 }
 
-#midPageWrapper #main #leftContent #blackBar1 {
+#midPageWrapper .main #leftContent #blackBar1 {
   font-size: .65rem;
   font-style: italic;
 }
 
-#midPageWrapper #main #leftContent ul {
+#midPageWrapper .main #leftContent ul {
   font-size: .7rem;
   -webkit-columns: 2;
           columns: 2;
@@ -532,19 +532,19 @@ footer {
   margin-right: .1rem;
 }
 
-#midPageWrapper #main #rightContent {
+#midPageWrapper .main #rightContent {
   text-align: center;
 }
 
-#midPageWrapper #main #rightContent h3 {
+#midPageWrapper .main #rightContent h3 {
   margin: .5rem 0;
 }
 
-#midPageWrapper #main #rightContent h4 {
+#midPageWrapper .main #rightContent h4 {
   margin: .2rem 0;
 }
 
-#midPageWrapper #main #rightContent h2 {
+#midPageWrapper .main #rightContent h2 {
   margin: .5rem 0;
 }
 
@@ -641,18 +641,18 @@ footer {
   grid-column: span 2;
 }
 
-#partnerWrapper #main {
+#partnerWrapper .main {
   text-align: justify;
 }
 
-#partnerWrapper #main img {
+#partnerWrapper .main img {
   display: inline-block;
   vertical-align: middle;
   width: 30%;
   padding: .3rem 0;
 }
 
-#partnerWrapper #main:after {
+#partnerWrapper .main:after {
   content: "";
   width: 100%;
   display: inline-block;
@@ -689,7 +689,7 @@ footer {
   /*----------- BODY --------------*/
   header,
   nav,
-  #main,
+  .main,
   footer {
     max-width: 47rem;
     margin: auto;
@@ -764,11 +764,11 @@ footer {
     margin: auto;
     margin-bottom: .5rem;
   }
-  #bannerWrapper #main {
+  #bannerWrapper .main {
     margin: auto;
     padding: 0 2rem;
   }
-  #bannerWrapper #main #banner {
+  #bannerWrapper .main #banner {
     width: 100%;
   }
   #midPageWrapper {
@@ -777,7 +777,7 @@ footer {
     color: #fff;
     margin-bottom: 3rem;
   }
-  #midPageWrapper #main {
+  #midPageWrapper .main {
     padding: .5rem 2rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -786,12 +786,12 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  #midPageWrapper #main li {
+  #midPageWrapper .main li {
     list-style-type: none;
     position: relative;
     /* It is required for setting position to absolute in the next rule. */
   }
-  #midPageWrapper #main li::before {
+  #midPageWrapper .main li::before {
     content: '\2022';
     /* Unicode for • character */
     position: absolute;
@@ -801,33 +801,33 @@ footer {
     font-size: 1.3rem;
     /* Adjust this value so that it appears what size you want. */
   }
-  #midPageWrapper #main #leftContent {
+  #midPageWrapper .main #leftContent {
     width: 70%;
     margin: 0;
   }
-  #midPageWrapper #main #leftContent h3 {
+  #midPageWrapper .main #leftContent h3 {
     margin: .5rem 0;
   }
-  #midPageWrapper #main #leftContent #blackBar1 {
+  #midPageWrapper .main #leftContent #blackBar1 {
     font-size: .65rem;
     font-style: italic;
   }
-  #midPageWrapper #main #leftContent ul {
+  #midPageWrapper .main #leftContent ul {
     margin-left: 2rem;
     font-size: .8rem;
     -webkit-columns: 1;
             columns: 1;
   }
-  #midPageWrapper #main #rightContent {
+  #midPageWrapper .main #rightContent {
     text-align: right;
   }
-  #midPageWrapper #main #rightContent h3 {
+  #midPageWrapper .main #rightContent h3 {
     margin: .5rem 0;
   }
-  #midPageWrapper #main #rightContent h4 {
+  #midPageWrapper .main #rightContent h4 {
     margin: .2rem 0;
   }
-  #midPageWrapper #main #rightContent h2 {
+  #midPageWrapper .main #rightContent h2 {
     margin: .5rem 0;
   }
   #articleWrapper h2 {
@@ -911,15 +911,15 @@ footer {
   #partnerWrapper {
     height: 4rem;
   }
-  #partnerWrapper #main {
+  #partnerWrapper .main {
     text-align: justify;
   }
-  #partnerWrapper #main img {
+  #partnerWrapper .main img {
     display: inline-block;
     vertical-align: middle;
     width: 14%;
   }
-  #partnerWrapper #main:after {
+  #partnerWrapper .main:after {
     content: "";
     width: 100%;
     display: inline-block;
