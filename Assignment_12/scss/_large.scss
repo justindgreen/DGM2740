@@ -1,0 +1,39 @@
+/*----------- BODY --------------*/
+#pageWrapper{
+    grid-template-areas: 
+    "header"
+    "navigation"
+    "main"
+    "footer";
+}
+/*----------- HEADER --------------*/
+
+/*----------- NAVIGATION --------------*/
+#primaryNav {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+
+    li{ 
+        float: left;
+        border-left: 1px solid #333;
+
+    &:first-child {
+        display: none;
+    }
+}
+}
+/*----------- MAIN --------------*/
+
+#mainWrapper {
+
+    main {
+        article {
+            div {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+/*----------- FOOTER --------------*/

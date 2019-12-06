@@ -1,0 +1,87 @@
+/*----------- BODY --------------*/
+
+#pageWrapper{
+    grid-template-areas: 
+    "header header"
+    "navigation main"
+    "footer footer";
+}
+
+/*----------- HEADER --------------*/
+
+header {
+    margin: 0 0 0 2vw;
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+}
+
+/*  ----------------------- NAVIGATION --------------------------- */
+// unordered list Navigation Bar --------------------------------------------------------
+#primaryNav {
+    overflow: hidden;
+    width: 20vw;
+
+    li{
+
+    &:first-child {
+        display: none;
+    }
+}
+}
+// end nav
+
+
+/*----------- MAIN --------------*/
+#mainWrapper {
+
+    main {
+        article {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            grid-template-areas: 
+            "image title title title"
+            "image description description description";
+            
+            h3 {
+                margin-bottom: 0;
+                grid-column: span 3;
+                grid-area: title;
+            }
+
+            img {
+                grid-column: span 1;
+                grid-row: span 2;
+                grid-area: image;
+            }
+
+            div {
+                grid-column: span 3;
+                grid-area: description;
+            }
+        }
+        #article1, #article3 {
+            grid-template-areas: 
+            "title title title image"
+            "description description description image";
+        }
+    }
+
+}
+
+/*----------- FOOTER --------------*/
+
+#footerWrapper {
+    footer {
+        div#copywrite {
+            font-size: 1rem;
+        }
+    }
+}

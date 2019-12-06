@@ -1,0 +1,252 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: $fontFamilyVariable;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    margin: 1rem 0;
+}
+
+header,
+nav,
+main,
+footer {
+    max-width: 64rem;
+}
+
+/*----------- HEADER --------------*/
+
+#headerWrapper {
+    position: relative;
+    overflow: hidden;
+    background: #ddd;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    margin: 0 2%;
+
+    img {
+        height: 100px;
+        float: left;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        float: left;
+        padding-top: .5rem;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 1rem;
+        z-index: 2;
+    }
+
+}
+
+/*----------- NAVIGATION --------------*/
+
+#hamburgerBtn {
+    display: none;
+}
+
+/* hide the navigation button for all screen widths. We will show it below just for small screens */
+
+//these two variables control the background color and text color
+$menuColor: lighten($primaryColor, 5%);
+$menuTextColor: rgba(255, 255, 255, 0.9);
+
+.navWrapper {
+    background-color: $menuColor;
+    width: 100%
+}
+
+#pageWrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "navBar"
+        "header"
+        "main"
+        "footer"
+        "navigation";
+
+    #hamburgerBtnWrapper {
+        grid-area: navBar;
+    }
+
+    #headerWrapper {
+        grid-area: header;
+    }
+
+    #mainWrapper {
+        grid-area: main;
+    }
+
+    #footerWrapper {
+        grid-area: footer;
+    }
+
+    #navigation {
+        grid-area: navigation;
+    }
+}
+
+@media only screen and (max-width: 37rem) {
+
+    //Styles the clickable hamburger button
+    #hamburgerBtn {
+        width: 100vw;
+        background-color: $menuColor;
+        margin: 0;
+        padding: 0;
+        font-family: Verdana;
+        font-weight: normal;
+        display: block;
+
+        li {
+
+            a {
+                display: block; // shows the nav links
+                width: 100%;
+                padding: .75rem 2vw;
+                font-size: 14px;
+                text-shadow: -1px -1px 0 rgba(0, 0, 0, .15);
+                color: $menuTextColor;
+                text-decoration: none;
+                border-top: 1px solid rgba(0, 0, 0, .2);
+
+                i {
+                    font-size: 2rem;
+                    font-style: normal;
+                }
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+    }
+}
+
+/* End Mobile Styles */
+
+// unordered list Navigation Bar --------------------------------------------------------
+#primaryNav {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: $menuColor;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+    font-weight: normal;
+    display: block;
+
+    li {
+        &.current-menu-item a {
+            background-color: rgba(0, 0, 0, 0.25);
+        }
+
+        a {
+            display: block; // shows the nav links
+            width: 100%;
+            padding: .75rem 2vw;
+            font-size: 14px;
+            text-shadow: -1px -1px 0 rgba(0, 0, 0, .15);
+            color: $menuTextColor;
+            text-decoration: none;
+            border-top: 1px solid rgba(0, 0, 0, .2);
+
+            i {
+                font-size: 2rem;
+                font-style: normal;
+            }
+
+            &:hover {
+                background-color: rgba(0, 0, 0, .5);
+            }
+        }
+    }
+}
+
+
+
+
+/*----------- MAIN --------------*/
+
+#mainWrapper {
+
+    margin: 0 2%;
+
+    main {
+        article {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
+
+            h3 {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+/*----------- FOOTER --------------*/
+#footerWrapper {
+    width: 100%;
+    border-top: 1px black solid;
+    background: $primaryColor;
+
+    footer {
+        width: 100%;
+        color: #fff;
+
+        div#copywrite {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: .75rem;
+        }
+    }
+}
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
