@@ -1,0 +1,53 @@
+
+
+/*----------- BODY --------------*/
+
+
+
+/*----------- HEADER --------------*/ 
+
+/*----------- NAVIGATION --------------*/
+
+#navWrapper {
+        nav {
+    
+            ul {
+    
+                li {
+                    width: auto;
+    
+                    a {
+                        padding: .5rem 1rem;
+                    }
+    
+                    &:last-child a {border-right: 1px solid #777;}
+    
+                    &:first-child a {margin-left: 0;}
+               }
+            }
+        }
+    }
+
+/*----------- MAIN --------------*/
+#mainWrapper {
+    
+
+    main {
+        .articles {
+            height: 27rem;
+            article { 
+                width: 23%;
+                img {
+                    width: 70%;
+                }
+
+            }
+
+    }
+}
+
+}
+
+
+/*----------- FOOTER --------------*/
+    

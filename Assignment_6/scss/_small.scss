@@ -1,0 +1,164 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 16px;
+    font-family: $fontFamilyVariable
+}
+
+img {
+    max-width: 100%;
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+header,
+nav,
+main,
+footer,
+#galleryWrapper {
+    max-width: 75rem;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/*----------- HEADER --------------*/
+
+header {
+    display: flex;
+    justify-content: left;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    height: 104px;
+    background-color: $primaryColor;
+    vertical-align: middle;
+
+    h1 {
+        margin: 0;
+        padding: 1rem 0 0 0;
+    }
+
+    h2 {
+        margin: 0;
+        font-weight: normal;
+    }
+}
+
+/*----------- NAVIGATION --------------*/
+#navWrapper {
+    nav {
+        background-color: lighten($primaryColor, 20%);
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+            li {
+                float: left;
+                width: 25%;
+
+                a {
+                    display: block;
+                    color: #333;
+                    border-left: 1px solid #777;
+                    padding: .5rem 0;
+                    text-decoration: none;
+                    font-size: .9rem;
+                    text-align: center;
+
+                    &:hover {
+                        background-color: lighten($primaryColor, 30%);
+                        color: #333;
+                    }
+                }
+
+                &:first-child a {
+                    border-left: none;
+                }
+
+                &.active a {
+                    background-color: lighten($primaryColor, 10%);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*----------- MAIN --------------*/
+
+#mainWrapper {
+    max-width: 75rem;
+    margin: auto;
+    padding-bottom: 1rem;
+
+    h2, h3 {
+        margin-bottom: .2rem;
+    }
+
+    main {
+        .articles {
+            display: flex;
+   justify-content: space-between;
+   flex-flow: column wrap;
+
+            padding-bottom: 1rem;
+
+            article {
+                width: 100%;
+
+                img {
+                    float: right;
+                    clip-path: circle(50% at 50% 50%);
+                    width: 60%;
+                    shape-outside: circle(50%);
+                }
+            }
+        }
+    }
+
+    #gallery {
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+
+}
+
+/*----------- FOOTER --------------*/
+#footerWrapper {
+
+    footer {
+        background-color: $primaryColor;
+        padding: .5rem 2%;
+        text-align: center;
+    }
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
