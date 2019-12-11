@@ -1,0 +1,147 @@
+/*----------- BODY --------------*/
+
+/*----------- HEADER --------------*/
+
+#headerWrapper {
+
+    @media only screen and (min-width: 64rem) {
+
+    .logo {
+        top: 16rem;
+    }
+}
+
+    header {
+        #headerText {
+
+            h1 {
+                font-size: 3.84rem;
+            }
+
+            h2 {
+                font-size: 2.432rem;
+            }
+        }
+    }
+
+}
+
+/*----------- NAVIGATION --------------*/
+
+/*----------- MAIN --------------*/
+
+#mainWrapper {
+    .covers {
+        display: grid;
+        grid-template-rows: auto;
+        grid-gap: 1rem;
+        padding: 1rem;
+
+        .book {
+            grid-column: span 1;
+        }
+
+        &#firstSection {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &#secondSection {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &#thirdSection {
+            grid-template-columns: repeat(12, 1fr);
+
+            .book {
+                grid-column: span 4;
+            }
+
+            .secondRow {
+                grid-column: 3/span 4
+            }
+        }
+
+        img {
+            width: 100%;
+            transition: .5s ease-in-out all;
+        }
+
+        .coverImage {
+            position: relative;
+            display: inline-block;
+
+            &:hover img {
+                opacity: .3;
+            }
+
+            &:hover .summaryText {
+                opacity: 1;
+            }
+
+        }
+
+        .summaryText {
+            display: block;
+            font-size: 1.15rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            margin: auto;
+            padding: 1rem;
+            text-align: justify;
+            transition: .5s ease-in-out all;
+        }
+
+        .span {
+            grid-column: span 1;
+        }
+
+        .review {
+            display: block;
+            width: 90%;
+            margin: .3rem auto 0;
+
+            p {
+                text-align: right;
+                margin: .3rem 0 0;
+            }
+        }
+    }
+}
+
+.blogPost {
+
+    .featureImage {
+        float: right;
+        width: 30%;
+        margin: 0 0 .5rem 1rem;
+    }
+}
+
+#contact {
+    padding: 0 2%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .contact-wrapper {
+        max-width: 38rem;
+        width: 50%;
+        margin: 0;
+    }
+
+    #message {
+        display: block;
+        width: 50%;
+        padding: 1rem 0 1rem 1rem;
+    }
+}
+
+/*----------- FOOTER --------------*/
+
+#footerWrapper {
+    max-width: 100%
+}

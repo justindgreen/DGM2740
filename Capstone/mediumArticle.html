@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Fill Me In" />
+  <meta name="author" content="John Doe" />
+
+  <!-- This start file was build by Paul Cheney  -->
+  <title>DGM 2740 Capstone</title>
+
+  <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- STYLE SHEETS -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/all.css" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-1.8.3.min.js" integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body style="background: #fff;">
+
+  <!-- CONTENT HERE -->
+  <div id="mainWrapper" style="color: #000">
+    <main>
+      <div id="pageTitle">
+        <h3>Medium Article</h3>
+      </div>
+
+      <p>The problems on this site were numerous: poor layout, drab color choices, enourmous misuse of white-space, and in general just bad design. The whole site was set up in a 3 coulmn layout, with 2 persistant sidebars, the left of which changed based on the page to hold either a tiny bit of text, of images that belonged in the main section. The right sidebar never changed and holds reviews for the author's books.</p>
+      <p>The only option that I could see for this site was a complete overhaul from the ground up.</p>
+      <p>I started with a background image for the header based off of cover art for the first 2 books in the Hunger Games series. I blended them together, then removed the dark areas and set a gradient background across the whole body that transitions subtley from one color tone to another, tying the 2 artworks together further.</p>
+      <p>I then added a fixed, scaling Heading and Subheading, Navigation at the top, and a fixed position, scaling, pixel-density responsive logo that helps to bridge between the header and the main content of the page.</p>
+      <p>For the pages, I tried to keep them mostly similar categories to what the original site had, though I renamed the "Interview" tab to be Blog, with the intent of making it a placeholder for an actual blog to be developed later. I nested the actual Interview page as a faux blog post in a submenu.</p>
+      <p>The home page I turning into a "Coming Soon" landing page, though I did add the responsive slider at the bottom, as per the directions. To be honest, I probably would not have the slider on this page in a real project, though it could easily become the basis for a gallery page.</p>
+      <p>For the Books page, I made sections for the different types of books she has written, and made info cards with the covers, the reviews she had in the sidebar, and a hover animation the overlays the cover with a short blurb about each particular book.</p>
+      <p>The About The Author page is a basic bio with a wrapped picture of the author that is responsive.</p>
+      <p>The faux blog post is where I decided to use the lazy-loading gallery, though I made it into a lazy loading background image gallery behind the post. The taller the post, the more images are allowed to show, and they only load when you scroll to them. I couldn't think of a better place to put in this requirement without making a whole new media gallery page.</p>
+      <p>Finally we have a basic Contact page, with a responsive, if basic, form that takes you to a thank you page on submission.</p>
+      <p>The most challenging part of this particular assignment was making the header, the header background, and the logo all move and scale together to keep consitency across multiple device widths. I learned a lot about scaling text that I didn't know before, as well as nesting positioning and starting with assests that are properly sized.</p>
+      <p>Working with this different color pallete also presented some challenges, but I think that it turned out well and I enjoyed it.</p>
+      <section id="contact">
+        <div style="text-align: center; width: 50%; padding: 1rem;">
+          <h1>Old</h1>
+          <img src="images/old.jpg" alt="old site" />
+        </div>
+        <div style="text-align: center; width: 50%; padding: 1rem;">
+            <h1>New</h1>
+            <img src="images/new.jpg" alt="old site" />
+          </div>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

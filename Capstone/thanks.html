@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Fill Me In" />
+  <meta name="author" content="John Doe" />
+
+  <!-- This start file was build by Paul Cheney  -->
+  <title>DGM 2740 Capstone</title>
+
+  <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- STYLE SHEETS -->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/all.css" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-1.8.3.min.js" integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8="
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div id="mobile_nav">
+    <div class="icon">Menu &equiv;</div>
+    <ul class="nav">
+      <li>
+        <a id="mobile_nav_home" rel="home" href="/Capstone/index.html">Home</a>
+      </li>
+      <li>
+        <a id="nav_books" rel="books" href="/Capstone/books.html">Books</a>
+      </li>
+      <li>
+        <a id="mobile_nav_author" rel="author" href="/Capstone/author.html">About the Author</a>
+      </li>
+      <li class="parent">
+        <a id="mobile_nav_blog" rel="blog" href="#">Blog</a>
+        <ul class="subMenu">
+          <li>
+            <a href="/Capstone/blog.html">Scholastic Press Interview</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a id="mobile_nav_contact" rel="contact" href="/Capstone/contact.html">Contact</a>
+      </li>
+    </ul>
+  </div>
+
+  <div id="socialMobile">
+    <a href="https://www.facebook.com/" target="_blank">
+      <img src="images/facebook.png">
+    </a>
+    <a href="https://twitter.com/" target="_blank">
+      <img src="images/twitter.png">
+    </a>
+    <a href="http://instagram.com/" target="_blank">
+      <img src="images/instagram.png">
+    </a>
+    <a href="https://www.goodreads.com/" target="_blank">
+      <img src="images/googleplus.png">
+    </a>
+  </div>
+  <div id="headerWrapper">
+    <img id="headerBackground" src="images/header.png" alt="Suzanne Collins" />
+    <figure class="logo">
+      <img src="images/logo.png" alt="logo" srcset="images/logo1x.png 1x, 
+        images/logo2x.png 2x, 
+        images/logo3x.png 3x">
+    </figure>
+    <header>
+      <div id="nav" class="group">
+        <ul class="nav">
+          <li>
+            <a id="nav_home" rel="home" href="/Capstone/index.html">Home</a>
+          </li>
+          <li>
+            <a id="nav_books" rel="books" href="/Capstone/books.html">Books</a>
+          </li>
+          <li>
+            <a id="nav_author" rel="author" href="/Capstone/author.html">About the Author</a>
+          </li>
+          <li class="parent">
+            <a id="nav_blog" rel="blog" href="#">Blog</a>
+            <ul class="subMenu">
+              <li>
+                <a href="/Capstone/blog.html">Scholastic Press Interview</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a id="nav_contact" rel="contact" href="/Capstone/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <div id="headerText">
+        <a href="index.html">
+          <h1>SUZANNE COLLINS</h1>
+        </a>
+        <h2>Author of the bestselling
+          <br/>'The Hunger Games' series.</h2>
+      </div>
+    </header>
+  </div>
+  <!--end of headerWrapper-->
+
+  <!-- CONTENT HERE -->
+  <div id="mainWrapper">
+    <main>
+      <div id="pageTitle">
+        <h3>CONTACT</h3>
+      </div>
+      <section id="contact">
+
+        <div id="thankYou">
+          <h1>Thank you for sending me a message!</h1>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- FOOTER HERE -->
+  <div id="footerWrapper">
+    <footer>
+      <div id="socialFooter">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img src="images/facebook.png">
+        </a>
+        <a href="https://twitter.com/" target="_blank">
+          <img src="images/twitter.png">
+        </a>
+        <a href="http://instagram.com/" target="_blank">
+          <img src="images/instagram.png">
+        </a>
+        <a href="https://www.goodreads.com/" target="_blank">
+          <img src="images/googleplus.png">
+        </a>
+      </div>
+      <div id="copywrite">© 2019 Suzanne Collins</div>
+    </footer>
+  </div>
+  <!--end of footerWrapper-->
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+
+      $("#mobile_nav .nav").hide();
+      $(".submenu").hide();
+      $(".icon").click(function () {
+        $(".nav").slideToggle(300);
+        $(".subMenu").slideUp(200);
+      });
+
+      $(".parent").click(function () {
+        $(".subMenu").slideToggle(200);
+      })
+
+      $("#nav_contact").addClass("current")
+
+    });
+
+  </script>
+</body>
+
+</html>
