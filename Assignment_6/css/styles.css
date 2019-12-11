@@ -483,6 +483,7 @@ header h2 {
 #mainWrapper #gallery img {
   display: block;
   width: 100%;
+  min-height: 120px;
 }
 
 /*----------- FOOTER --------------*/
